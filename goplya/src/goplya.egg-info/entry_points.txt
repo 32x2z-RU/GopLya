@@ -1,0 +1,2 @@
+[console_scripts]
+gop = goplya.cli:main

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "goplya"
+version = "2.2.0"
+description = "Интерпретатор языка ГопЛя 2.2 «Ля'Мадмуазель»"
+readme = "README.md"
+license = {text = "Ля'Пивас 0.5"}
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+
+[project.scripts]
+gop = "goplya.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["goplya*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
